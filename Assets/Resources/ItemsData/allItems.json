@@ -1,0 +1,215 @@
+{
+    "itemNames": [
+        "knife",
+        "spoon",
+        "pan",
+        "stove",
+        "rice cooker",
+        "blender",
+        "plate",
+        "bowl",
+        "carrying plate"
+    ],
+
+    "foodNames": [
+        "burger", 
+        "chocolatecake",
+        "carrotcake",
+        "popsicle", 
+        "coffeecup", 
+        "apple", 
+        "candy", 
+        "cupcake", 
+        "donut", 
+        "cookie", 
+        "pretzel", 
+        "cakeslice", 
+        "icecream", 
+        "strawberrycake", 
+        "vanillamilkshake",
+        "orangeJuice",
+        "noodles",
+        "pizza",
+        "pepsi",
+        "pancakes",
+        "sandwich",
+        "taco",
+        "water"
+    ],
+
+    "allergyNames": [
+        "peanuts",
+        "eggs",
+        "honey",
+        "fish",
+        "sesame",
+        "milk",
+        "kiwi",
+        "mustard",
+        "wheat",
+        "butter",
+        "potato",
+        "carrots",
+        "berries",
+        "bananas",
+        "vanilla",
+        "orange"
+    ],
+    
+    "foodsFromScratch": 
+    [
+        {
+            "name": "burger",
+            "ingredients": ["bottomBun", "friedPotatoes", "cheese", "lettuce", "potato", "topBun"]
+        },
+
+        {
+            "name": "hotdog",
+            "ingredients": ["hotdog bun", "sausage"]
+        },
+
+        {
+            "name": "carrotcake",
+            "ingredients": ["carrots", "flour", "sugar", "cooking oil", "spices", "baking soda", "butter", "milk"]
+        },
+
+        {
+            "name": "chocolatecake",
+            "ingredients": ["chocolate", "flour", "sugar", "cooking oil", "spices", "baking soda", "butter", "vanilla", "milk"]
+        },
+
+        {
+            "name": "strawberrycake",
+            "ingredients": ["carrots", "flour", "sugar", "cooking oil", "spices", "baking soda", "butter", "vanilla", "milk"]
+        },
+
+        {
+            "name": "coffeecup",
+            "ingredients": ["coffebeans", "sugar", "hotwater"]
+        }
+    ],
+
+    "foodsPremade": ["apple", "popsicle", "candy", "cupcake", "donut", "cookie", "pretzel", "cake slice", "icecream", "strawberry cake", "vanilla milkshake"],
+
+    "foodsWithAllergies": 
+    [
+        {
+        "name": "hotdog",
+        "allergies": ["eggs", "flour"]
+        },
+        {
+        "name": "burger",
+        "allergies": ["eggs", "milk", "wheat"]
+        },
+        {
+        "name": "chocolatecake",
+        "allergies": ["milk", "eggs", "wheat", "vanilla", "chocolate"]
+        },
+        {
+        "name": "carrotcake",
+        "allergies": ["eggs", "milk", "wheat", "carrots"]
+        },
+        {
+        "name": "popsicle",
+        "allergies": ["honey"]
+        },
+        {
+        "name": "coffeecup",
+        "allergies": ["milk"]
+        },
+        {
+        "name": "apple",
+        "allergies": []
+        },
+        {
+        "name": "candy",
+        "allergies": ["milk"]
+        },
+        {
+        "name": "cupcake",
+        "allergies": ["milk", "eggs", "wheat"]
+        },
+        {
+        "name": "donut",
+        "allergies": ["milk", "eggs", "wheat"]
+        },
+        {
+        "name": "cookie",
+        "allergies": ["milk", "eggs", "wheat"]
+        },
+        {
+        "name": "pretzel",
+        "allergies": ["wheat", "eggs", "sesame", "flour"]
+        },
+        {
+        "name": "cakeslice",
+        "allergies": ["milk", "eggs", "wheat"]
+        },
+        {
+        "name": "icecream",
+        "allergies": ["milk"]
+        },
+        {
+        "name": "strawberrycake",
+        "allergies": ["milk", "eggs", "wheat", "berries"]
+        },
+        {
+        "name": "vanillamilkshake",
+        "allergies": ["milk", "vanilla"]
+        },
+        {
+        "name": "orangeJuice",
+        "allergies": ["orange"]
+        },
+        {
+        "name": "noodles",
+        "allergies": ["wheat", "eggs"]
+        },
+        {
+        "name": "pizza",
+        "allergies": ["milk", "wheat"]
+        },
+        {
+        "name": "pepsi",
+        "allergies": []
+        },
+        {
+        "name": "pancakes",
+        "allergies": ["milk", "eggs", "wheat"]
+        },
+        {
+        "name": "sandwich",
+        "allergies": ["milk", "wheat", "eggs"]
+        },
+        {
+        "name": "taco",
+        "allergies": ["wheat", "milk"]
+        },
+        {
+        "name": "water",
+        "allergies": []
+        }
+    ],
+
+    "blenderFood": [
+        "milk", "banana", "strawberry", "chocolate", "orange", "lemon"
+    ],
+
+    "ingredients": [
+        "strawberry", "banana", "chocolate", 
+        "lemon", "orange", "water", 
+        "wheat", "milk", "eggs", 
+        "vanilla", "berries", "honey", 
+        "carrots", "flour", "sugar", 
+        "hot water", "coffee beans", "cooking oil", 
+        "spices", "baking soda", "butter", 
+        "bottomBun", "friedPotatoes", "cheese", 
+        "lettuce", "potato", "topBun"
+    ],
+
+    "kitchenToolsCorFoods": [
+        [["blender"], ["milk", "banana", "strawberry", "chocolate", "orange", "lemon"]],
+        [["pan"], ["slicedtomato", "patty", "oil", "slicedPotato", "egg"]]
+    ]
+}
+      

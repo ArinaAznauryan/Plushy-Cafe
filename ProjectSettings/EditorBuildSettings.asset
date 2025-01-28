@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/StartScene.unity
+    guid: 70aa32e4c6cbca448bdc9fff8537f361
+  - enabled: 0
+    path: Assets/Scenes/Playground.unity
+    guid: 707acc8dffb72b144bb1ffbe1c965f3d
+  - enabled: 1
+    path: Assets/Scenes/Kitchen1.unity
+    guid: 6d5ec102152362f4983308490c50f6b2
+  - enabled: 1
+    path: Assets/Scenes/real.unity
+    guid: 2a8cd5e3e15c1d946ad7ad5618c73e46
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 358b91b535f4e684893db37eab5c30e2,
+      type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3b2ba255f62343d47a67c1e5ab7ec245,
+      type: 2}
