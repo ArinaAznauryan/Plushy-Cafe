@@ -3,6 +3,8 @@
 ## About This Project
 
   Dzviks and Dzukik's cafe is a 3D mobile simulation game, where you’ll serve adorable animal customers, manage your cafe, and create a cozy experience filled with food, and fluffy friends🐻
+
+  The project is still under development!
 ---
 
 **#How to play/build the project**
