@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3666546466356254687}
   - component: {fileID: 3666546466356254685}
   - component: {fileID: 3666546466356254684}
-  - component: {fileID: 223311071972078508}
+  - component: {fileID: 5751607492321127140}
   m_Layer: 0
   m_Name: donut
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4477520604080130124}
-  m_LocalRotation: {x: -0, y: -0.00000017881392, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 18, y: 5.4, z: 22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -122,8 +122,8 @@ MonoBehaviour:
     onDeselect:
       m_PersistentCalls:
         m_Calls: []
---- !u!64 &223311071972078508
-MeshCollider:
+--- !u!65 &5751607492321127140
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -132,10 +132,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.81, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4876996681462395029
 GameObject:
   m_ObjectHideFlags: 0
@@ -40159,7 +40158,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 7
+  m_VersionIndex: 49
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

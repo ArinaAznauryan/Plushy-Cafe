@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
+using System.Linq;
 
 [CustomEditor(typeof(GrabbableItem))]
 public class GrabbableItemEditor : Editor
@@ -46,9 +47,9 @@ public class GrabbableItemEditor : Editor
                 dish.food.name = EditorGUILayout.TextField("Dish Name", dish.food.name);
 
                 if (dish.allergies == null) dish.allergies = new List<Allergy>();
-                
+
                 EditorGUILayout.LabelField("Allergies");
-                
+
                 for (int i = 0; i < dish.allergies.Count; i++)
                 {
                     EditorGUILayout.BeginHorizontal();
@@ -72,6 +73,57 @@ public class GrabbableItemEditor : Editor
                 GUILayout.Label("KitchenTool Properties", EditorStyles.boldLabel);
 
                 kitchenTool.name = EditorGUILayout.TextField("Tool Name", kitchenTool.name);
+                kitchenTool.state = (KitchenToolState)EditorGUILayout.EnumPopup("State", kitchenTool.state);
+
+                EditorGUI.indentLevel++;
+
+                if (GUILayout.Button("Initialize recipes"))
+                {
+                    kitchenTool.InitRecipes();
+                }
+                //kitchenTool.recipes.name = EditorGUILayout.TextField("Recipe name", kitchenTool.recipes.name);
+                //holder.kitchenTool.durability = EditorGUILayout.IntField("Durability", holder.kitchenTool.durability);
+
+                EditorGUI.indentLevel--;
+                //kitchenTool.recipes = EditorGUILayout.TextField("Recipes", kitchenTool.recipes);
+
+                if (kitchenTool.recipes != null)
+                {
+                    EditorGUILayout.LabelField("Recipes");
+
+                    for (int i = 0; i < kitchenTool.recipes.Count; i++)
+                    {
+                        EditorGUILayout.BeginHorizontal();
+                        kitchenTool.recipes[i].name = EditorGUILayout.TextField($"Recipe {i + 1}", kitchenTool.recipes[i].name);
+
+
+                        EditorGUILayout.LabelField("Ingredients", EditorStyles.boldLabel);
+
+                        for (int j = 0; j < kitchenTool.recipes[i].ingredients.Count; j++)
+                        {
+                            kitchenTool.recipes[i].ingredients[j] = EditorGUILayout.TextField($"{j + 1}", kitchenTool.recipes[i].ingredients[j]);
+                        }
+
+                        if (GUILayout.Button("Add ingredient"))
+                        {
+                            kitchenTool.recipes[i].ingredients = AddIngredient(kitchenTool.recipes[i].ingredients);
+                        }
+
+                        if (GUILayout.Button("Remove ingredient", GUILayout.Width(60)))
+                        {
+                            kitchenTool.recipes.RemoveAt(i);
+                        }
+                        EditorGUILayout.EndHorizontal();
+                    }
+
+
+                    if (GUILayout.Button("Add recipe")) kitchenTool.recipes.Add(new Recipe(string.Empty, new List<string>()));
+
+                    if (GUILayout.Button("Remove recipes"))
+                    {
+                        kitchenTool.recipes = null;
+                    }
+                }
 
 
                 if (GUILayout.Button("Remove KitchenTool"))
@@ -93,5 +145,12 @@ public class GrabbableItemEditor : Editor
 
         serializedObject.ApplyModifiedProperties();
         EditorUtility.SetDirty(grabbableItem);
+    }
+
+    List<string> AddIngredient(List<string> ingredients)
+    {
+        var newRecipes = ingredients;
+        newRecipes.Add("");
+        return newRecipes;
     }
 }

@@ -210,6 +210,22 @@
     "kitchenToolsCorFoods": [
         [["blender"], ["milk", "banana", "strawberry", "chocolate", "orange", "lemon"]],
         [["pan"], ["slicedtomato", "patty", "oil", "slicedPotato", "egg"]]
+    ],
+
+    "kitchenToolsValidRecipes": [
+        {
+            "name": "pan",
+            "validRecipes": [
+                {
+                    "name": "omelette",
+                    "ingredients": ["egg", "tomato"]
+                },
+
+                {
+                    "name": "friedPatty",
+                    "ingredients": ["patty"]
+                }
+            ]
+        }
     ]
-}
-      
+} 

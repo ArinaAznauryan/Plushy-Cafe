@@ -51,15 +51,38 @@ using UnityEngine.AI;
         public List<string> blenderFood;
         public List<string> ingredients;
         public List<List<List<string>>> kitchenToolsCorFoods;
+        public List<KitchenToolsValidRecipes> kitchenToolsValidRecipes;
     }
 
-    public class KitchenToolsCorFoods
+// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
+public class KitchenToolsValidRecipes
+{
+    public string name { get; set; }
+    public List<ValidRecipes> validRecipes { get; set; }
+}
+
+public class ValidRecipes
+{
+    public Recipe recipe { get; set; }
+}
+
+public class Recipe
+{
+    public string name { get; set; }
+    public List<string> ingredients { get; set; }
+
+    //REQUIRED for JSON deserialization!
+    public Recipe() { }
+
+    public Recipe(string name, List<string> ingredients)
     {
-        public List<string> blender { get; set; }
-        public List<string> pan { get; set; }
+        this.name = name;
+        this.ingredients = ingredients;
     }
+}
 
-    [System.Serializable]
+
+[System.Serializable]
     public class ScratchFood {
         public string name;
         public List<string> ingredients;
@@ -81,7 +104,7 @@ using UnityEngine.AI;
     {
         public Camera playerCamera;
         TextAsset itemsJson, animalsJson;
-        Items allItemsJson;
+        public Items allItemsJson;
         List<string> itemNames;
         List<string> foodNames;
         List<string> allergyNames;
@@ -89,6 +112,8 @@ using UnityEngine.AI;
         List<string> blenderFood;
 
         List<string> animalNames;
+
+        List<KitchenToolsValidRecipes> kitchenToolsValidRecipes;
 
         List<AudioClip> soundEffects;
 
@@ -99,8 +124,14 @@ using UnityEngine.AI;
 
         float cosAngle = 0;
 
+        private void OnValidate() {
+            LoadItemData();
+
+        Debug.Log(kitchenToolsValidRecipes[0].validRecipes);
+        }
+
         public void Awake() {
-            //playerCamera = GameEventsManager.instance.player.transform.GetComponentsInChildren<Camera>()[0];
+            playerCamera = Camera.main;
             LoadItemData();
             LoadAnimalData();
             LoadMusicData();
@@ -150,6 +181,7 @@ using UnityEngine.AI;
             allergyNames = allItemsJson.allergyNames.ToList();
             foodsWithAllergies = allItemsJson.foodsWithAllergies.ToList();
             blenderFood = allItemsJson.blenderFood.ToList();
+            kitchenToolsValidRecipes = allItemsJson.kitchenToolsValidRecipes;
         }
 
         void LoadAnimalData() {
@@ -162,11 +194,9 @@ using UnityEngine.AI;
         }
 
         public void GenerateRandomAnimal() {
-            //Debug.Log("Did u happen?");
-            GameObject randomAnimal = Instantiate(defaultAnimalPrefab, new Vector3(-132.42f, 2.45f, -49.96f), Quaternion.identity);
+            GameObject randomAnimal = Instantiate(defaultAnimalPrefab, new Vector3(-100.62f, 2.34f, -16.03f), Quaternion.identity);
             string animalPath = "Models/AnimalModels/" + animalNames[UnityEngine.Random.Range(0, animalNames.Count-1)];
             GameObject randomAnimalMesh = Resources.Load(animalPath) as GameObject;
-            //randomAnimal.transform.GetChild(0).GetComponent<SkinnedMeshRenderer>().sharedMesh = randomAnimalMesh.transform.GetChild(0).GetComponent<MeshFilter>().sharedMesh;
         }
 
         public bool PlayerInCafe() {
@@ -209,8 +239,6 @@ using UnityEngine.AI;
 
         public GameObject LoadPrefabOnRandOrderPath(List<string> values, string path) {
 
-            //DirectoryInfo dir = new DirectoryInfo("Assets/Resources/"+path);
-            //FileInfo[] info = dir.GetFiles("*.prefab");
             List<GameObject> objects = (Resources.LoadAll<GameObject>(path)).ToList();
             foreach (GameObject obj in objects) 
             {
@@ -218,10 +246,7 @@ using UnityEngine.AI;
                 foreach (string name in ((obj.name).ToString()).Split(' ').ToList()) {
                     Debug.Log("Name: " + name);
                 }
-               // Debug.Log("AUR NO:" + DelSubString(obj.ToString(), "Resources"));
-                //GameObject test = (GameObject)Resources.Load<GameObject>(DelSubString(f.ToString(), "Resources"));
-               // Debug.Log ("Found: " + test);
-                
+
                 if (IsEqualOnRandOrder(values, ((obj.name).ToString()).Split(' ').ToList())) {
                     Debug.Log("FOUND IT");
                     return obj;
@@ -231,12 +256,8 @@ using UnityEngine.AI;
         }
 
         public Dish DefineDish(List<string> ingredients) {
-            //new Dish(new Food("defaultFood", 1))
-            //public ScratchFood[] foodsFromScratch;
-            //string[] ingredients;
+
             List<ScratchFood> allScratchIngredients = allItemsJson.foodsFromScratch.ToList();
-            //foodsWithAllergies.Where(x => x.name.Equals(food.name)).ToList();
-            //List<string> allIngredients = allItemsJson.ingredients.ToList();
 
             foreach (ScratchFood ingredientGroup in allScratchIngredients){
                 if (IsEqualOnRandOrder(ingredients, ingredientGroup.ingredients.ToList())) {
@@ -262,37 +283,6 @@ using UnityEngine.AI;
 
             GameEventsManager.instance.Updatables.AddUpdatable(() => questionMarkLook(questionMark));
         }
-
-        // public GameObject InstantiateWithNetwork(GameObject prefab, Vector3 position) {
-        //     GameObject result = Instantiate(prefab, position, Quaternion.identity);
-        //     GlobalManager.Instance.SpawnGlobalObject(result);
-        //     // List<Transform> childTransforms = new List<Transform>();
-
-        //     // foreach (Transform child in result.transform) {
-        //     //     childTransforms.Add(child);
-        //     // }
-
-        //     // childTransforms.RemoveAt(0);
-        //     // // GameObject savedReference;
-        //     // // savedReference.transform.parent = result.parent;
-        //     // // savedReference.transform.localPosition = new Vector3(0, 0, 0);
-
-        //     // for (int i = 0; i < result.transform.childCount; i++) {
-        //     //     GameObject child = result.transform.GetChild(i).gameObject;
-        //     //     if (child.GetComponent<NetworkObject>()) 
-        //     //     {
-        //     //         child.transform.parent = result.transform;
-        //     //         AssignTransform(child.transform, childTransforms[i]);
-
-        //     //         GlobalManager.Instance.SpawnGlobalObject(child);
-        
-        //     //     }
-        //     // }
-            
-        //     //Destroy(savedReference);
-
-        //     return result;
-        // }
 
         public void AssignTransform(Transform target, Transform target2) {
             target.position = target2.position;
@@ -383,6 +373,53 @@ using UnityEngine.AI;
                 }
             }
             return false;
+        }
+
+        public List<string> FindValidFoods(InventoryItem tool) {
+            KitchenTool kitchenTool = tool as KitchenTool;
+
+            for (int i = 0; i < allItemsJson.kitchenToolsCorFoods.Count; i++) {
+                var items = allItemsJson.kitchenToolsCorFoods;
+
+                if (kitchenTool.name == items[i][0][0]) {
+                    return items[i][1];
+                }
+
+                else {
+                    Debug.LogError("There's no such kitchenTool of valid recipes!");
+                    return null;
+                }
+            }
+            Debug.LogError("Couldn't find the kitchenTool from valid recipes!");
+            return null;
+        }
+
+        public List<Recipe> FindValidRecipes(InventoryItem tool) {
+            KitchenTool kitchenTool = tool as KitchenTool;
+
+        for (int i = 0; i < kitchenToolsValidRecipes.Count; i++)
+        {
+            var items = allItemsJson.kitchenToolsValidRecipes;
+            Debug.Log(items[i]);
+
+            Debug.Log("In the loop: " + items[i].name + ", " + kitchenTool.name);
+            Debug.Log("Fuck u : " + items[i].validRecipes.Count);
+
+            if (kitchenTool.name == items[i].name)
+            {
+                Debug.Log("Hello?");
+                List<Recipe> recipes = new List<Recipe>();
+
+                foreach (ValidRecipes validRecipe in items[i].validRecipes)
+                {
+                    Debug.Log("Recipe: " + validRecipe.recipe.name);
+                    //recipes.Add(validRecipe.recipes);
+                }
+                /*return recipes;*/ return new List<Recipe>();
+            }
+        }
+            Debug.LogError("Couldn't find the kitchenTool from valid recipes!");
+            return null;
         }
 
         public AnimalOrder GenerateRandomAnimalOrder() {

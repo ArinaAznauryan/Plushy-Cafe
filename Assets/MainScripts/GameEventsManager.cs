@@ -28,6 +28,10 @@ public class GameEventsManager : MonoBehaviour
 
     bool once = true;
 
+    private void OnValidate() {
+        instance = this;
+    }
+
     void Awake() {
         Initialize();
         

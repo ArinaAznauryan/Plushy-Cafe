@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4572717602877615590}
   - component: {fileID: 4572717602877615588}
   - component: {fileID: 4572717602877615589}
-  - component: {fileID: 7378888729410675588}
+  - component: {fileID: 2908137241350063253}
   m_Layer: 0
   m_Name: cakeslice
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3725857600317862517}
-  m_LocalRotation: {x: -0, y: 0.5142782, z: -0, w: 0.85762346}
+  m_LocalRotation: {x: 0, y: 0.51427484, z: 0, w: 0.8576255}
   m_LocalPosition: {x: 18.770002, y: 6.238, z: 20.489998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -35,7 +35,7 @@ Transform:
   - {fileID: 3499018876071434647}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 61.898, z: 0}
 --- !u!54 &4572717602877615590
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -122,8 +122,8 @@ MonoBehaviour:
     onDeselect:
       m_PersistentCalls:
         m_Calls: []
---- !u!64 &7378888729410675588
-MeshCollider:
+--- !u!65 &2908137241350063253
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -132,10 +132,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5636585197165202092
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5636585197165202092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.016666949, y: -0.059444427, z: -0.14444469}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18219,7 +18218,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 16
+  m_VersionIndex: 55
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

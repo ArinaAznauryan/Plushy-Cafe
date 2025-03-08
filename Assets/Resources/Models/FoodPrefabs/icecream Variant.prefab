@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 3732430817680117046, guid: e057d8be85bcc6f4e9e89ad538f3b433,
         type: 3}
       propertyPath: m_Name
-      value: icecream Variant
+      value: icecream
       objectReference: {fileID: 0}
     - target: {fileID: 3732430817680117048, guid: e057d8be85bcc6f4e9e89ad538f3b433,
         type: 3}
@@ -96,6 +96,11 @@ PrefabInstance:
         type: 3}
       propertyPath: canvas
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653075036814028011, guid: e057d8be85bcc6f4e9e89ad538f3b433,
+        type: 3}
+      propertyPath: m_VersionIndex
+      value: 28
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3732430818736786060, guid: e057d8be85bcc6f4e9e89ad538f3b433, type: 3}

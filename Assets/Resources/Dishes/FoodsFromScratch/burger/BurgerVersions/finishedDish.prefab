@@ -46773,7 +46773,7 @@ GameObject:
   - component: {fileID: 3826686740595617443}
   - component: {fileID: 3826686740595617446}
   - component: {fileID: 3826686740595617447}
-  - component: {fileID: 811582682564466725}
+  - component: {fileID: 1771935033204934996}
   m_Layer: 0
   m_Name: finishedDish
   m_TagString: grabbable
@@ -46872,13 +46872,18 @@ MonoBehaviour:
   rootPrefab: {fileID: 0}
   eternal: 0
   item:
-    rid: -2
+    rid: 7109779882365157377
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
---- !u!64 &811582682564466725
+    - rid: 7109779882365157377
+      type: {class: Dish, ns: , asm: Assembly-CSharp}
+      data:
+        food:
+          number: 1
+          name: burger
+        allergies: []
+--- !u!64 &1771935033204934996
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46889,6 +46894,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}

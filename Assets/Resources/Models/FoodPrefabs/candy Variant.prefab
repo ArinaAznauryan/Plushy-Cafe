@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 7009700519637282023, guid: 2883a67736c66c64ba3fb6c238a417c8,
         type: 3}
       propertyPath: m_Name
-      value: candy Variant
+      value: candy
       objectReference: {fileID: 0}
     - target: {fileID: 7096707529369224965, guid: 2883a67736c66c64ba3fb6c238a417c8,
         type: 3}
@@ -97,5 +97,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 87.988
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3297681418763726270, guid: 2883a67736c66c64ba3fb6c238a417c8, type: 3}
+    - {fileID: 8179786639385537910, guid: 2883a67736c66c64ba3fb6c238a417c8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2883a67736c66c64ba3fb6c238a417c8, type: 3}

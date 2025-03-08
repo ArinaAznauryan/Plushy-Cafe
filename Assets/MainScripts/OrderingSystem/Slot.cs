@@ -23,7 +23,12 @@ public class Slot : MonoBehaviour
         curGrabItem.enabled = true;
         if (!depending) curGrabItem.Drop();
         else curGrabItem.DropDepending();
+        SetLayer(curGrabItem.gameObject, "Default");
         curGrabItem = null;
+    }
+
+    void SetLayer(GameObject tarObj, string name) {
+        tarObj.layer = LayerMask.NameToLayer(name);
     }
 
     public void AnnulItem() {
@@ -72,7 +77,8 @@ public class Slot : MonoBehaviour
     }
 
     void GenerateSlotItem(GrabbableItem prevItem, bool deletePrev) {
-        
+        SetLayer(curGrabItem.gameObject, "Character");
+
         if (deletePrev) {
             prevItem.enabled = true;
             prevItem.Drop();

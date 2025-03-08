@@ -65,7 +65,9 @@ PrefabInstance:
     - target: {fileID: 669868263495450093, guid: 363779a3633e62c4c97e5230ec16e4aa,
         type: 3}
       propertyPath: m_Name
-      value: pretzel Variant
+      value: pretzel
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7926812171915378411, guid: 363779a3633e62c4c97e5230ec16e4aa, type: 3}
+    - {fileID: 5244291466487781676, guid: 363779a3633e62c4c97e5230ec16e4aa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 363779a3633e62c4c97e5230ec16e4aa, type: 3}
