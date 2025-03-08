@@ -478,7 +478,7 @@ MonoBehaviour:
     - lettuce
     - potato
     - topBun
-  player: {fileID: 0}
+  player: {fileID: 2291046308444086693}
 --- !u!114 &223982071662717054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,7 +511,7 @@ MonoBehaviour:
   Updatables: {fileID: 223982071662717054}
   personController: {fileID: 5464323830643973941}
   TablesManager: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 2291046308444086693}
 --- !u!1 &5464323830643973950
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,7 +546,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5464323830643973950}
-  m_LocalRotation: {x: -0, y: -0.9953936, z: -0, w: 0.09587337}
+  m_LocalRotation: {x: 0, y: -0.9953937, z: 0, w: 0.09587191}
   m_LocalPosition: {x: -106.39, y: 1.457609, z: 7.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -968,7 +968,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5464323830674301570}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1556,7 +1556,7 @@ GameObject:
   - component: {fileID: 8842093961218810821}
   m_Layer: 0
   m_Name: PlayerFollowCamera
-  m_TagString: Untagged
+  m_TagString: CinemachineTarget
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1569,7 +1569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8801239578966692206}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.33, y: 7, z: 2.61}
+  m_LocalPosition: {x: 0.33, y: 7, z: 1.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1625,7 +1625,22 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5944516099517209590, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
+      propertyPath: m_Dithering
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5944516099517209590, guid: 2d3a85ecde41a8246a79669975912b74,
+        type: 3}
+      propertyPath: m_Antialiasing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5944516099517209590, guid: 2d3a85ecde41a8246a79669975912b74,
+        type: 3}
       propertyPath: m_Cameras.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5944516099517209590, guid: 2d3a85ecde41a8246a79669975912b74,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -5944516099517209590, guid: 2d3a85ecde41a8246a79669975912b74,
@@ -1641,7 +1656,7 @@ PrefabInstance:
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.32999986
+      value: 0.32999974
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
@@ -1651,7 +1666,7 @@ PrefabInstance:
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.6100018
+      value: 1.680002
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
@@ -1793,7 +1808,7 @@ PrefabInstance:
     - target: {fileID: 222050229755299745, guid: e4fae383363b1574597c681830e7fdc7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 20
+      value: -35.6
       objectReference: {fileID: 0}
     - target: {fileID: 222050229755299745, guid: e4fae383363b1574597c681830e7fdc7,
         type: 3}

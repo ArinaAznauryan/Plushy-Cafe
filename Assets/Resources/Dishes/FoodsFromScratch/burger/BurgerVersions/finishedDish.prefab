@@ -46773,7 +46773,7 @@ GameObject:
   - component: {fileID: 3826686740595617443}
   - component: {fileID: 3826686740595617446}
   - component: {fileID: 3826686740595617447}
-  - component: {fileID: 1771935033204934996}
+  - component: {fileID: 7596928842464747635}
   m_Layer: 0
   m_Name: finishedDish
   m_TagString: grabbable
@@ -46883,8 +46883,8 @@ MonoBehaviour:
           number: 1
           name: burger
         allergies: []
---- !u!64 &1771935033204934996
-MeshCollider:
+--- !u!65 &7596928842464747635
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -46893,7 +46893,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.76, y: 0.64000005, z: 0.76}
+  m_Center: {x: 0, y: 0.29333338, z: -0.04666668}
