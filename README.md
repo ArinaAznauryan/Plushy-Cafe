@@ -6,9 +6,11 @@
 
   The project is still under development!
 ---
+**[Click to download and play the MVP build](https://drive.google.com/drive/folders/1SzRibLU6j1EGWwz4XnJj7LHHY046J-EW?usp=drive_link)**
 
-**#How to play/build the project**
 
+
+## How to play/build the project
   You will need a Unity version of 2021.3.19 or higher(not suggested for Unity 6)
 
 
