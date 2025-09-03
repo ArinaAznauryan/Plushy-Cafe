@@ -1,8 +1,8 @@
-# Dzvik and Dzukik's cafe
+# Plushy Cafe
 
 ## About This Project
 
-  Dzviks and Dzukik's cafe is a 3D mobile simulation game, where you’ll serve adorable animal customers, manage your cafe, and create a cozy experience filled with food, and fluffy friends🐻
+  Plushy Cafe's cafe is a 3D mobile simulation game, where you’ll serve adorable animal customers, manage your cafe, and create a cozy experience filled with food, and fluffy friends🐻
 
   The project is still under development!
 ---
@@ -48,7 +48,7 @@ https://github.com/user-attachments/assets/b73b5022-1db6-480e-8966-cebb9f674c5a
 1. **Download and Install Unity**: Make sure you have Unity installed (recommended version: [2021.3.19]).
 2. **Clone the repository**: Write the following command to clone the repository to your PC.
     ```bash
-    git clone https://github.com/ArinaAznauryan/Dzvik-and-Dzukik-s-cafe.git
+    git clone https://github.com/ArinaAznauryan/Plushy-Cafe.git
     ```
 3. **Open in Unity**: Open the cloned project in Unity.
 4. **Play**: Press Play in the Unity editor to start the project.
